@@ -93,22 +93,22 @@
         <section class="appointment">
             <h2>Записаться</h2>
             <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-            <!-- Здесь будет форма -->
+
             <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
                 <p class="appointment-item">
                     <label for="appointment-date">Время</label>
                     <input id="appointment-date" type="text" name="date" value="" placeholder="01.01.2019">
                 </p>
                 <p class="appointment-item">
-                        <label for="appointment-time">Время</label>
-                    <input id="appointment-time"type="text" name="time" value="" placeholder="10:00"></p>
+                    <label for="appointment-time">Время</label>
+                    <input id="appointment-time" type="text" name="time" value="" placeholder="10:00"></p>
                 <p class="appointment-item">
-                        <label for="appointment-name">Время</label>
+                    <label for="appointment-name">Время</label>
                     <input id=appointment-name type="text" name="name" value="" placeholder="Борода"></p>
                 <p class="appointment-item">
-                        <label for="appointment-phone">Время</label>
+                    <label for="appointment-phone">Время</label>
                     <input id=appointment-phone type="tel" name="phone" value="" placeholder="+7 926 358-31-15"></p>
-                    <button class="button" type="submit">Отправить</button>
+                <button class="button" type="submit">Отправить</button>
             </form>
         </section>
     </main>
@@ -132,7 +132,23 @@
     <section class="modal modal-login">
         <h2>Личный кабинет</h2>
         <p>Введите свой логин и пароль</p>
-        <!-- Здесь будет форма -->
+
+        <form action="https://echo.htmlacademy.ru" class="user-form" method="post">
+            <p>
+                <label for="user-login" class="visually-hidden">Логин</label>
+                <input id="user-login" type="text" class="login-icon-user" name="login" placeholder="Логин">
+            </p>
+            <p>
+                <label for="user-password" class="visually-hidden">Пароль</label>
+                <input id="user-password" type="password" class="login-icon-password" name="password"
+                    placeholder="Пароль">
+            </p>
+            <p class="user-password-info">
+                <input id="user-password-info" type="checkbox" class="visually-hedden" name="remember">Запомните меня
+                <a href="#" class="user-password-restore">Я забыл пароль!</a>
+            </p>
+            <button class="button" type="submit">Войти</button>
+        </form>
         <span class="modal-close">x</span>
     </section>
     <section class="modal modal-map">
@@ -141,4 +157,4 @@
     </section>
 </body>
 
-</html> б
+</html>
