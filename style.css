@@ -1,6 +1,6 @@
 body {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 
     font-family: "PT Sans Narrow", Arial, sans-serif;
     font-size: 14px;
@@ -14,13 +14,14 @@ body {
     background-position: top center;
     background-repeat: no-repeat;
 }
+
 a {
     text-decoration: none;
 }
 
 /* Общие стили внутренних страниц */
 
-.inner-page{
+.inner-page {
     color: #000;
 
     background-color: #f9f6f3;
@@ -29,7 +30,11 @@ a {
     background-repeat: repeat;
 }
 
-
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
 
 /* // */
 
@@ -52,12 +57,32 @@ a {
 }
 
 .main-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
     font-size: 16px;
     line-height: 20px;
-    color:#fff;
+    color: #fff;
 
     background-color: #000;
 }
+
+.main-header-logo {
+    order: 2;
+}
+
+.main-navigation-wrapper {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.main-navigation-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .site-navigation,
 .user-navigation {
@@ -66,7 +91,7 @@ a {
 
 .site-navigation a,
 .user-navigation a {
-    color:#fff;
+    color: #fff;
 }
 
 .site-navigation a:hover,
@@ -76,11 +101,22 @@ a {
     background-color: #242424;
 }
 
+.features {
+    margin-bottom: 80px;
+}
+
 .features-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
 .features-item {
+    width: 300px;
+
     text-align: center;
 }
 
@@ -90,6 +126,10 @@ a {
 }
 
 .index-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+    margin-bottom: 35px;
     color: #000;
 
     background-color: #f8f5f2;
@@ -103,18 +143,34 @@ a {
     line-height: 42px;
 }
 
+.news {
+    width: 380px;
+}
+
 .news-list {
-    font-size: 30px;
-    line-height: 42px;
+    list-style: none;
+    /* line-height: 42px; */
 }
 
 .news-item time {
     text-decoration: none;
 }
 
+.gallery {
+    width: 300px;
+}
+
 .gallery-content {
     background-color: #ccc;
     border: 7px solid #fff;
+}
+
+.contacts {
+    width: 380px;
+}
+
+.appointment {
+    width: 300px;
 }
 
 .appointment-item input {
@@ -123,10 +179,13 @@ a {
     background-color: transparent;
     border: 2px solid #000;
 }
+
 .appointment-item input:focus {
     border-color: #663d15;
     outline: none;
 }
+
+
 /* Общие стили для внутренних страниц */
 
 .page-title {
@@ -137,10 +196,12 @@ a {
 .breadcrumbs a {
     color: #000;
 }
+
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
     text-decoration: underline;
-    }
+}
+
 .breadcrumbs-current {
     color: #aba9a7;
 }
@@ -148,20 +209,23 @@ a {
 .filter fieldset {
     border: none;
 }
+
 .filter legend {
     font-size: 24px;
     line-height: 30px;
 }
+
 .filter ul {
     list-style: none;
     line-height: 18px;
 }
 
-.filter-input:hover + label,
-.filter-input:focus + label {
+.filter-input:hover+label,
+.filter-input:focus+label {
     color: #663d15;
 }
-.filter-input:disabled + label {
+
+.filter-input:disabled+label {
     color: #000;
 
     opacity: 0.5;
@@ -183,6 +247,7 @@ a {
 .catalog-item a {
     color: #000;
 }
+
 .catalog-item h3 {
     font-size: 14px;
     line-height: 18px;
@@ -208,11 +273,13 @@ a {
 .pagination-list {
     list-style: none;
 }
-.pagination-list a{
+
+.pagination-list a {
     color: #fff;
 
     background-color: #000;
 }
+
 .pagination-item a:hover,
 .pagination-item a:focus,
 .pagination-item a:active {
@@ -224,6 +291,7 @@ a {
 
     background-color: #fff;
 }
+
 .pagination-item-current a:hover,
 .pagination-item-current a:focus,
 .pagination-item-current a:active {
@@ -231,6 +299,7 @@ a {
 
     background-color: #fff;
 }
+
 /* Стилизация карточки товара */
 
 .product-photo-preview {
@@ -269,6 +338,8 @@ a {
 /* // */
 
 .main-footer {
+    padding: 60px 0;
+    margin-top: 65px;
     color: #fff;
 
     background-color: #212121;
@@ -277,16 +348,29 @@ a {
     background-repeat: repeat;
 }
 
-.footer-contacts a{
+.main-footer .container {
+    display: flex;
+}
+
+.footer-contacts {
+    width: 320px;
+    margin: 0;
+    margin-right: 80px;
+}
+
+
+.footer-contacts a {
     color: #fff;
     text-decoration: underline;
 }
+
 .footer-contacts a:hover,
 .footer-contacts a:focus {
     text-decoration: none;
 }
 
 .footer-social {
+    width: 145px;
     text-align: center;
 }
 
@@ -297,9 +381,10 @@ a {
 .social-button {
     color: #fff;
 }
-
 .footer-copyright {
-    text-align: center;
+    width: 150px;
+    margin: 0;
+    margin-left: auto;
 }
 
 .footer-copyright .button:hover,
@@ -325,9 +410,9 @@ a {
 
 .user-form input[type="text"],
 .user-form input[type="password"] {
-    font:inherit;
+    font: inherit;
     outline: none;
-    color:#000;
+    color: #000;
     text-transform: uppercase;
 
     background-color: #f9f6f3;
