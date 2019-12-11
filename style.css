@@ -20,7 +20,6 @@ a {
 }
 
 /* Общие стили внутренних страниц */
-
 .inner-page {
     color: #000;
 
@@ -35,6 +34,29 @@ a {
     margin: 0 auto;
     padding: 0 10px;
 }
+
+.inner-page .user-navigation {
+    margin-left: auto;
+}
+
+.inner-page .main-header {
+    margin-bottom: 50px;
+
+    background-color: #000;
+}
+
+.inner-page .main-header-logo {
+    order: 0;
+
+    width: 111px;
+    padding: 23px 20px;
+}
+
+.inner-page .main-navigation {
+    align-items: flex-start;
+    flex-direction: row;
+}
+
 
 /* // */
 
@@ -189,11 +211,22 @@ a {
 /* Общие стили для внутренних страниц */
 
 .page-title {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
     font-size: 30px;
     line-height: 42px;
 }
 
+/* Хлебные крошки */
+.breadcrumbs {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
 .breadcrumbs a {
+
     color: #000;
 }
 
@@ -205,7 +238,16 @@ a {
 .breadcrumbs-current {
     color: #aba9a7;
 }
+/* КАТАЛОГ */
+.catalog-columns {
+    display: flex;
+    justify-content: space-between;
+}
+/* Фильтры */
 
+.filters {
+    width: 180px;
+}
 .filter fieldset {
     border: none;
 }
@@ -231,13 +273,30 @@ a {
     opacity: 0.5;
 }
 
+/* Каталог товаров */
+
+.catalog{
+    width: 700px;
+}
 .catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding:0;
+    margin: 0;
+
     list-style: none;
 }
-
+/* Карточка товара */
 .catalog-item {
+    width: 220px;
+    margin-bottom: 20px;
+    margin-right: 20px;
     background-color: #f8f8f8;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .catalog-item:hover {
@@ -269,8 +328,12 @@ a {
     line-height: 20px;
     color: #fff;
 }
-
+/* Пагинация */
 .pagination-list {
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+
     list-style: none;
 }
 
@@ -300,7 +363,7 @@ a {
     background-color: #fff;
 }
 
-/* Стилизация карточки товара */
+/* Карточка товара */
 
 .product-photo-preview {
     list-style: none;
@@ -335,7 +398,7 @@ a {
     list-style: none;
 }
 
-/* // */
+/* Подвал */
 
 .main-footer {
     padding: 60px 0;
@@ -347,7 +410,9 @@ a {
     background-position: 0 0;
     background-repeat: repeat;
 }
-
+.inner-page .main-footer {
+    margin-top: 45px;
+}
 .main-footer .container {
     display: flex;
 }
@@ -381,6 +446,7 @@ a {
 .social-button {
     color: #fff;
 }
+
 .footer-copyright {
     width: 150px;
     margin: 0;
