@@ -85,8 +85,11 @@ input[type="radio"].vsually-hidden {
 /* // */
 
 .button {
-    font: inherit;
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 30px;
 
+    font: inherit;
     text-align: center;
     color: #fff;
     vertical-align: middle;
@@ -100,6 +103,13 @@ input[type="radio"].vsually-hidden {
 .button:focus,
 .button:active {
     background-color: #663d15;
+}
+
+.button.disabled,
+.button:disabled {
+    cursor: default;
+    opacity: 0.5;
+    background-color: #000;
 }
 
 /* Блок навигации */
@@ -192,6 +202,7 @@ input[type="radio"].vsually-hidden {
     opacity: 1;
 }
 
+/* Преимущества */
 
 .features {
     margin-bottom: 80px;
@@ -213,9 +224,36 @@ input[type="radio"].vsually-hidden {
 }
 
 .features-item h3 {
+    position: relative;
+
+    margin: 0px;
+    margin-bottom: 60px;
+
     font-size: 30px;
     line-height: 42px;
 }
+
+.features-item h3::after{
+    content: "";
+
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+
+    background-color: #fff;
+
+    transform: rotate(45deg);
+}
+
+.features-item p {
+    margin: 0 10px;
+}
+
+/* Контент */
 
 .index-columns {
     display: flex;
@@ -225,47 +263,134 @@ input[type="radio"].vsually-hidden {
     color: #000;
 
     background-color: #f8f5f2;
-    background-image: url("img/pattern-light.jpg");
-    background-position: 0 0;
-    background-repeat: repeat;
+    background-image:
+        url("img/line.png"),
+        url("img/pattern-light.jpg");
+    background-position: center, 0 0;
+    background-repeat: no-repeat, repeat;
 }
 
 .index-columns h2 {
+    margin:0;
+    margin-bottom: 25px;
+
     font-size: 30px;
     line-height: 42px;
 }
+
+/* Новости */
 
 .news {
     width: 380px;
 }
 
 .news-list {
+    margin: 0px;
+    margin-bottom: 25px;
+    padding: 0;
+
     list-style: none;
-    /* line-height: 42px; */
+
+}
+.news-item {
+    margin-bottom: 25px;
 }
 
+.news-item p{
+    margin:0;
+}
 .news-item time {
     text-decoration: none;
 }
+
+/* Фотогалерея */
 
 .gallery {
     width: 300px;
 }
 
+.gallery-container {
+    position: relative;
+
+    height: 260px;
+}
+
 .gallery-content {
+    height: 164px;
+    margin: 0px;
+
     background-color: #ccc;
     border: 7px solid #fff;
 }
+
+.gallery-content img {
+    width: 286px;
+    height: 164px;
+}
+
+.gallery-button {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+
+    width: 140px;
+    margin: 0px;
+}
+
+.gallery-button-back {
+    left: 0px;
+}
+.gallery-button-next {
+    right: 0px;
+}
+
+/* Контактная информация */
 
 .contacts {
     width: 380px;
 }
 
+.contacts p{
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+/* Форма "записаться" */
+
 .appointment {
     width: 300px;
 }
 
+.appointment-info {
+    margin:0px;
+    margin-bottom: 15px;
+}
+
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appointment-item {
+    width: 140px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+.appointment-item label {
+    display: block;
+    margin-bottom: 9px;
+    margin-left: 15px;
+}
+
 .appointment-item input {
+    box-sizing: border-box;
+    width: 140px;
+    padding-top: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 7px;
+
     font: inherit;
 
     background-color: transparent;
@@ -276,7 +401,11 @@ input[type="radio"].vsually-hidden {
     border-color: #663d15;
     outline: none;
 }
-
+.appointment .button {
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 0px;
+}
 
 /* Общие стили для внутренних страниц */
 

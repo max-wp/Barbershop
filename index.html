@@ -77,13 +77,18 @@
                 </ul>
             </section>
             <section class="gallery">
+
                 <h2>Фотогалерея</h2>
-                <figure class="gallery-content">
-                    <a href="#"><img src="img/studio.jpg" alt="Интерьер" width="286" height="164"></a>
-                    <button class="button gallery-button gallery-button-back" type="button">Назад</button>
+                <div class="gallery-container">
+                    <figure class="gallery-content">
+                        <a href="#"><img src="img/studio.jpg" alt="Интерьер" width="286" height="164"></a>
+                    </figure>
+                    <button class="button gallery-button gallery-button-back" type="button" disabled>Назад</button>
                     <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
-                </figure>
-            </section>
+                </div>
+        </div>
+
+        </section>
         </div>
 
         <div class="index-columns">
@@ -96,16 +101,17 @@
                 <p>
                     Время работы:<br>
                     пн-пт: c 10:00 до 22:00<br>
-                    сб-вс: c 10:00 lj 19:00
+                    сб-вс: c 10:00 до 19:00
                 </p>
                 <a href="map.html" class="button">Как проехать</a>
                 <a href="contacts.html" class="button">Обратная связь</a>
             </section>
-    
+
             <section class="appointment">
                 <h2>Записаться</h2>
-                <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-    
+                <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
+                </p>
+
                 <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
                     <p class="appointment-item">
                         <label for="appointment-date">Время</label>
@@ -140,7 +146,8 @@
                     <li><a href="#" class="social-button">Инстаграмм</a></li>
                 </ul>
             </div>
-            <p class="footer-copyright"><b>Разработано:<a href="https://web-prost.ru" class="button">Web-prost.ru</a></b>
+            <p class="footer-copyright"><b>Разработано:<a href="https://web-prost.ru"
+                        class="button">Web-prost.ru</a></b>
             </p>
         </div>
     </footer>
@@ -160,9 +167,9 @@
             </p>
             <p class="user-password-info">
                 <label class="login-checkbox">
-                <input id="user-password-info" type="checkbox" class="visually-hedden" name="remember">
-                <span class="checkbox-indicator"></span>
-                Запомните меня</label>
+                    <input id="user-password-info" type="checkbox" class="visually-hedden" name="remember">
+                    <span class="checkbox-indicator"></span>
+                    Запомните меня</label>
                 <a href="#" class="user-password-restore">Я забыл пароль!</a>
             </p>
             <button class="button" type="submit">Войти</button>
