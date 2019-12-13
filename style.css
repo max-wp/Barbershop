@@ -655,17 +655,68 @@ input[type="radio"].vsually-hidden {
 }
 
 .footer-social ul {
+    display: flex;
+    width: 141px;
+    flex-wrap: wrap;
+    justify-content: space-between;
     list-style: none;
-}
 
-.social-button {
-    color: #fff;
+    margin: 0 auto;
+    padding: 0;
 }
+.footer-social b{
+    display: block;
+    margin-bottom: 15px;
+}
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/social-icons.png);
+    width: 43px;
+    height: 43px;
+    font-size: 14px;
+  }
+  .vkontakte:{
+    background-position: 0 43px;
+  }
+  .vkontakte:hover{
+    background-position: 0 43px;
+  }
+  
+  .facebook {
+    background-position: -43px 0;
+  }
+  
+  .facebook:hover {
+    background-position: -43px 43px;
+  }
+  
+  .instagram {
+    background-position: -86px 0;
+  }
+  
+  .instagram:hover {
+    background-position: -86px 43px;
+  }
+
+
 
 .footer-copyright {
     width: 150px;
     margin: 0;
     margin-left: auto;
+    text-align: center;
+}
+
+.footer-copyright b {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-copyright .button {
+    display: block;
+    margin-right: 0;
 }
 
 .footer-copyright .button:hover,
