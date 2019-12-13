@@ -13,6 +13,7 @@ body {
     background-image: url("img/bckgr-index.jpg");
     background-position: top center;
     background-repeat: no-repeat;
+
 }
 
 a {
@@ -122,8 +123,6 @@ input[type="radio"].vsually-hidden {
     font-size: 16px;
     line-height: 20px;
     color: #fff;
-
-    background-color: #000;
 }
 
 .main-header-logo {
@@ -133,6 +132,7 @@ input[type="radio"].vsually-hidden {
 .main-navigation-wrapper {
     width: 100%;
     margin-bottom: 60px;
+    background-color: #000;
 }
 
 .main-navigation-wrapper .container {
@@ -233,7 +233,7 @@ input[type="radio"].vsually-hidden {
     line-height: 42px;
 }
 
-.features-item h3::after{
+.features-item h3::after {
     content: "";
 
     position: absolute;
@@ -271,7 +271,7 @@ input[type="radio"].vsually-hidden {
 }
 
 .index-columns h2 {
-    margin:0;
+    margin: 0;
     margin-bottom: 25px;
 
     font-size: 30px;
@@ -292,13 +292,15 @@ input[type="radio"].vsually-hidden {
     list-style: none;
 
 }
+
 .news-item {
     margin-bottom: 25px;
 }
 
-.news-item p{
-    margin:0;
+.news-item p {
+    margin: 0;
 }
+
 .news-item time {
     text-decoration: none;
 }
@@ -340,6 +342,7 @@ input[type="radio"].vsually-hidden {
 .gallery-button-back {
     left: 0px;
 }
+
 .gallery-button-next {
     right: 0px;
 }
@@ -350,7 +353,7 @@ input[type="radio"].vsually-hidden {
     width: 380px;
 }
 
-.contacts p{
+.contacts p {
     margin: 0;
     margin-bottom: 25px;
 }
@@ -362,7 +365,7 @@ input[type="radio"].vsually-hidden {
 }
 
 .appointment-info {
-    margin:0px;
+    margin: 0px;
     margin-bottom: 15px;
 }
 
@@ -377,6 +380,7 @@ input[type="radio"].vsually-hidden {
     margin: 0px;
     margin-bottom: 10px;
 }
+
 .appointment-item label {
     display: block;
     margin-bottom: 9px;
@@ -401,6 +405,7 @@ input[type="radio"].vsually-hidden {
     border-color: #663d15;
     outline: none;
 }
+
 .appointment .button {
     width: 100%;
     margin-top: 10px;
@@ -664,10 +669,12 @@ input[type="radio"].vsually-hidden {
     margin: 0 auto;
     padding: 0;
 }
-.footer-social b{
+
+.footer-social b {
     display: block;
     margin-bottom: 15px;
 }
+
 .social-button {
     display: flex;
     align-items: center;
@@ -676,29 +683,31 @@ input[type="radio"].vsually-hidden {
     width: 43px;
     height: 43px;
     font-size: 14px;
-  }
-  .vkontakte:{
+}
+
+.vkontakte: {
     background-position: 0 43px;
-  }
-  .vkontakte:hover{
+}
+
+.vkontakte:hover {
     background-position: 0 43px;
-  }
-  
-  .facebook {
+}
+
+.facebook {
     background-position: -43px 0;
-  }
-  
-  .facebook:hover {
+}
+
+.facebook:hover {
     background-position: -43px 43px;
-  }
-  
-  .instagram {
+}
+
+.instagram {
     background-position: -86px 0;
-  }
-  
-  .instagram:hover {
+}
+
+.instagram:hover {
     background-position: -86px 43px;
-  }
+}
 
 
 
