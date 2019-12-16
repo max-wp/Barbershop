@@ -424,19 +424,39 @@ input[type="radio"].vsually-hidden {
 
 /* Хлебные крошки */
 .breadcrumbs {
+    display: flex;
     margin: 0;
     margin-bottom: 50px;
     padding: 0;
+    list-style: none;
 }
 
-.breadcrumbs a {
 
+.breadcrumbs a {
     color: #000;
 }
 
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
     text-decoration: underline;
+}
+.breadcrumbs a{
+    display: block;
+    position: relative;
+    margin-right: 40px;
+}
+.breadcrumbs a::after{
+    content: "";
+
+    position: absolute;
+    top: 7px;
+    
+    margin-left: 15px;
+    width: 10px;
+    height: 10px;
+
+    background-color: #000;
+    transform: rotate(45deg);
 }
 
 .breadcrumbs-current {
