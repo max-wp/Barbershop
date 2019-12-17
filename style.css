@@ -757,6 +757,7 @@ input[type="radio"].vsually-hidden {
 }
 
 .modal {
+    z-index: 2;
     position: fixed;
 
     color: #000;
@@ -768,7 +769,23 @@ input[type="radio"].vsually-hidden {
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
+/* Наложение прозрачного фона модальным окнам */
+.modal-overlay {
+    z-index: 1;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Стилизация модального окна "вход" */
+
 .modal-login {
+    display: none;
     top: 120px;
     left: 50%;
 
@@ -927,4 +944,22 @@ input[type="radio"].vsually-hidden {
 .login-form .button {
     width: 100%;
     margin-right: 0px;
+}
+
+/* Стилизация модалього окна "карта" */
+
+.modal-map {
+    display: none;
+    top: 50%;
+    left: 50%;
+
+    width: 766px;
+    height: 561px;
+    margin-top: -280px;
+    margin-left: -390px;
+
+    border: 7px solid white;
+}
+.modal-map p{
+    margin:0;
 }
