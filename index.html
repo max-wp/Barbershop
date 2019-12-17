@@ -157,7 +157,7 @@
         <h2>Личный кабинет</h2>
         <p>Введите свой логин и пароль</p>
 
-        <form action="https://echo.htmlacademy.ru" class="user-form" method="post">
+        <form action="https://echo.htmlacademy.ru" class="login-form" method="post">
             <p>
                 <label for="user-login" class="visually-hidden">Логин</label>
                 <input id="user-login" type="text" class="login-icon-user" name="login" placeholder="Логин">
@@ -167,16 +167,17 @@
                 <input id="user-password" type="password" class="login-icon-password" name="password"
                     placeholder="Пароль">
             </p>
-            <p class="user-password-info">
+            <p class="login-help">
                 <label class="login-checkbox">
-                    <input id="user-password-info" type="checkbox" class="visually-hedden" name="remember">
+                    <input  type="checkbox" class="visually-hidden" name="remember">
                     <span class="checkbox-indicator"></span>
-                    Запомните меня</label>
+                    Запомните меня
+                </label>
                 <a href="#" class="user-password-restore">Я забыл пароль!</a>
             </p>
             <button class="button" type="submit">Войти</button>
         </form>
-        <span class="modal-close">x</span>
+        <button class="modal-close" type="button">x</button>
     </section>
     <section class="modal modal-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>

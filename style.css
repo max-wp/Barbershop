@@ -431,7 +431,6 @@ input[type="radio"].vsually-hidden {
     list-style: none;
 }
 
-
 .breadcrumbs a {
     color: #000;
 }
@@ -440,17 +439,19 @@ input[type="radio"].vsually-hidden {
 .breadcrumbs a:focus {
     text-decoration: underline;
 }
-.breadcrumbs a{
+
+.breadcrumbs a {
     display: block;
     position: relative;
     margin-right: 40px;
 }
-.breadcrumbs a::after{
+
+.breadcrumbs a::after {
     content: "";
 
     position: absolute;
     top: 7px;
-    
+
     margin-left: 15px;
     width: 10px;
     height: 10px;
@@ -756,21 +757,88 @@ input[type="radio"].vsually-hidden {
 }
 
 .modal {
+    position: fixed;
+
     color: #000;
 
     background-color: #f8f3f0;
     background-image: url("img/pattern-light.jpg");
     background-position: 0 0;
     background-repeat: repeat;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-login {
+    top: 120px;
+    left: 50%;
+
+    width: 300px;
+    padding: 50px 80px;
+    margin-left: -230px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: -34px;
+
+    width: 22px;
+    height: 22px;
+
+    font-size: 0;
+
+    background-color: transparent;
+    border: 0;
+
+    cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 2px;
+
+    width: 19px;
+    height: 3px;
+
+    background-color: #d0d0d0;
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-close::after {
+    transform: rotate(-45deg);
 }
 
 .modal h2 {
+    margin: 0;
+    margin-bottom: 20px;
+
     font-size: 30px;
     line-height: 42px;
 }
 
-.user-form input[type="text"],
-.user-form input[type="password"] {
+.modal-description {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 10px 15px;
+    padding-right: 40px;
     font: inherit;
     outline: none;
     color: #000;
@@ -779,12 +847,73 @@ input[type="radio"].vsually-hidden {
     background-color: #f9f6f3;
     border: 2px solid #000;
 }
+.login-form .login-help {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.login-icon-user {
+    background-image: url("img/user.svg");
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.login-icon-password {
+    background-image: url("img/lock.svg");
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.login-checkbox {
+    position: relative;
+
+    padding-left: 30px;
+
+    cursor: pointer;
+}
 
 .login-checkbox:hover,
 .login-checkbox:focus {
     color: #663d15;
 }
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top:0;
+    left:0;
 
+    width: 17px;
+    height: 17px;
+
+    border: 2px solid #000;
+}
+.login-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto webkit-focus-ring-color;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 1px;
+
+    width: 15px;
+    height: 2px;
+
+    background-color: #000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before{
+ transform: rotate(45deg);
+}
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+    transform: rotate(-45deg);
+}
 .user-password-restore {
     color: #000;
     text-decoration: underline;
@@ -793,4 +922,9 @@ input[type="radio"].vsually-hidden {
 .user-password-restore:hover,
 .user-password-restore:focus {
     text-decoration: none;
+}
+
+.login-form .button {
+    width: 100%;
+    margin-right: 0px;
 }
