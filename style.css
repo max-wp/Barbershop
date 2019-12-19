@@ -144,6 +144,7 @@ input[type="radio"].vsually-hidden {
     opacity: 0.5;
     background-color: #000;
 }
+
 /* Стилизация нестандартных элементов, по классам */
 .inner-content .big-heading {
     display: flex;
@@ -161,7 +162,7 @@ input[type="radio"].vsually-hidden {
 .big-heading::after {
     content: "";
 
-    flex-grow:1;
+    flex-grow: 1;
     flex-shrink: 0;
 
     width: 50px;
@@ -169,14 +170,16 @@ input[type="radio"].vsually-hidden {
 
     background: #000;
 }
-.big-heading::before{
+
+.big-heading::before {
     margin-right: 25px;
 }
+
 .big-heading::after {
     margin-left: 25px;
 }
 
-.custom-list-1{
+.custom-list-1 {
     margin: 14px 0;
     padding: 0;
 
@@ -185,7 +188,7 @@ input[type="radio"].vsually-hidden {
 
 .custom-list-1 li {
     position: relative;
-    
+
     margin-bottom: 15px;
     padding-left: 20px;
 }
@@ -195,7 +198,7 @@ input[type="radio"].vsually-hidden {
 
     position: absolute;
 
-    top:8px;
+    top: 8px;
     left: 0;
 
     width: 8px;
@@ -205,18 +208,20 @@ input[type="radio"].vsually-hidden {
     transform: rotate(45deg);
 
 }
-.custom-table-1{
+
+.custom-table-1 {
     width: 100%;
 }
+
 .custom-table-1 td {
     width: 50%;
 }
 
-.custom-table-1 td:last-child{
+.custom-table-1 td:last-child {
     text-align: center;
 }
 
-.inner-columns{
+.inner-columns {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -224,7 +229,9 @@ input[type="radio"].vsually-hidden {
     margin: 60px 0;
 
 }
-.inner-column-left, .inner-column-right {
+
+.inner-column-left,
+.inner-column-right {
     width: 460px;
 
 }
@@ -239,10 +246,11 @@ input[type="radio"].vsually-hidden {
     margin-bottom: 0;
 }
 
-.inner-columns > h2:first-child{
+.inner-columns>h2:first-child {
     width: 100%;
-    margin-top:0px;
+    margin-top: 0px;
 }
+
 /* Блок навигации */
 .main-navigation {
     display: flex;
@@ -261,6 +269,7 @@ input[type="radio"].vsually-hidden {
 
 .main-navigation-wrapper {
     width: 100%;
+    min-height: 70px;
     margin-bottom: 60px;
     background-color: #000;
 }
@@ -1113,6 +1122,10 @@ input[type="radio"].vsually-hidden {
     margin-left: -390px;
 
     border: 7px solid white;
+}
+
+.modal-show {
+    display: block;
 }
 
 .modal-map p {

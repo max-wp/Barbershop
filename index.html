@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -27,6 +28,7 @@
                         <li><a href="catalog.html">Магазин</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
+
                     <ul class="user-navigation">
                         <li>
                             <a href="login.html" class="login-link">Вход</a>
@@ -34,6 +36,7 @@
                     </ul>
                 </div>
             </div>
+
         </nav>
     </header>
     <main class="container">
@@ -160,16 +163,16 @@
         <form action="https://echo.htmlacademy.ru" class="login-form" method="post">
             <p>
                 <label for="user-login" class="visually-hidden">Логин</label>
-                <input id="user-login" type="text" class="login-icon-user" name="login" placeholder="Логин">
+                <input id="user-login" type="text" class="login-icon-user" name="login" placeholder="Логин" required>
             </p>
             <p>
                 <label for="user-password" class="visually-hidden">Пароль</label>
                 <input id="user-password" type="password" class="login-icon-password" name="password"
-                    placeholder="Пароль">
+                    placeholder="Пароль" required>
             </p>
             <p class="login-help">
                 <label class="login-checkbox">
-                    <input  type="checkbox" class="visually-hidden" name="remember">
+                    <input type="checkbox" class="visually-hidden" name="remember">
                     <span class="checkbox-indicator"></span>
                     Запомните меня
                 </label>
@@ -185,6 +188,7 @@
         <button class="modal-close" type="button">Закрыть</button>
     </section>
     <div class="modal-overlay visually-hidden"></div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
