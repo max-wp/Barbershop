@@ -141,6 +141,7 @@ input[type="radio"].vsually-hidden {
 .button.disabled,
 .button:disabled {
     cursor: default;
+
     opacity: 0.5;
     background-color: #000;
 }
@@ -611,8 +612,8 @@ input[type="radio"].vsually-hidden {
     top: 7px;
 
     margin-left: 15px;
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
 
     background-color: #000;
     transform: rotate(45deg);
@@ -635,17 +636,31 @@ input[type="radio"].vsually-hidden {
 }
 
 .filter fieldset {
+    padding: 0;
+    margin: 0;
+
     border: none;
 }
 
 .filter legend {
+    padding: 0;
+
     font-size: 24px;
     line-height: 30px;
 }
 
 .filter ul {
-    list-style: none;
+    padding-left: 0;
+    margin-top: 30px;
+
     line-height: 18px;
+    list-style: none;
+}
+
+.filter ul li {
+    position: relative;
+
+    margin-bottom: 18px;
 }
 
 .filter-input:hover+label,
@@ -657,6 +672,63 @@ input[type="radio"].vsually-hidden {
     color: #000;
 
     opacity: 0.5;
+}
+
+.filter-checkbox {
+    position: relative;
+
+    padding-left: 40px;
+
+    cursor: pointer;
+}
+
+.filter-checkbox:hover,
+.filter-checkbox:focus {
+    color: #663d15;
+}
+
+.filter-checkbox input[type="checkbox"]+.checkbox-indicator {
+    position: absolute;
+    top: -2px;
+    left: 0;
+
+    width: 17px;
+    height: 17px;
+
+    border: 2px solid #000;
+}
+.filter-checkbox input:disabled+.checkbox-indicator {
+    border: 2px solid #aba9a7;
+}
+.filter-checkbox input:disabled+.checkbox-indicator span{
+    color: #aba9a7;
+}
+.filter-checkbox input[type="checkbox"]:focus+.checkbox-indicator {
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto webkit-focus-ring-color;
+}
+
+.filter-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before,
+.filter-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 1px;
+
+    width: 15px;
+    height: 2px;
+
+    background-color: #000;
+}
+
+.filter-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before {
+    transform: rotate(45deg);
+}
+
+.filter-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+    transform: rotate(-45deg);
 }
 
 /* Каталог товаров */
@@ -858,10 +930,14 @@ input[type="radio"].vsually-hidden {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(img/social-icons.png);
+
     width: 43px;
     height: 43px;
+
     font-size: 14px;
+
+    background-image: url(img/social-icons.png);
+
 }
 
 .vkontakte: {
@@ -894,6 +970,7 @@ input[type="radio"].vsually-hidden {
     width: 150px;
     margin: 0;
     margin-left: auto;
+
     text-align: center;
 }
 
@@ -1014,6 +1091,7 @@ input[type="radio"].vsually-hidden {
     width: 300px;
     padding: 10px 15px;
     padding-right: 40px;
+
     font: inherit;
     outline: none;
     color: #000;
@@ -1137,8 +1215,19 @@ input[type="radio"].vsually-hidden {
 /* Анимационные эффекты */
 
 @keyframes bounce {
-    0% {transform: translateY(-2000px); }
-    70% {transform: translateY(30px); }
-    90% {transform: translateY(-10px); }
-    100% {transform: translateY(0); }
+    0% {
+        transform: translateY(-2000px);
+    }
+
+    70% {
+        transform: translateY(30px);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
